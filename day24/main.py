@@ -6,10 +6,15 @@
 
 # ======= OR =======
 
-with open("my_file.txt") as file:   #open in read mode  -> mode=r
+#absolut path
+with open("/users/maria/workspace/my_file.txt") as file:   #open in read mode  -> mode=r
     contents = file.read()
     print(contents)
 
+#relative path
+with open("/../../workspace/my_file.txt") as file:
+    contents = file.read()
+    print(contents)
 
 with open("my_file.txt", mode="w") as file:
     file.write("\nNew write") # inlocuieste ce e in fisier cu ce am scris
